@@ -3,7 +3,7 @@
 #include "Game.h"
 
 CGame::CGame(){
-	estado;//ACT2: Mal <--Aqui debes de establecer el estado inicial de tu juego.
+	estado=estado_iniciado;//ACT2: Mal <--Aqui debes de establecer el estado inicial de tu juego.
 }
 
 // Con esta función eliminaremos todos los elementos en pantalla
@@ -29,6 +29,7 @@ bool CGame::Start()
 				break;
 		case Estado::estado_terminado:
 			salirJuego = true;
+			break;
 		};
     }
 	return true;
