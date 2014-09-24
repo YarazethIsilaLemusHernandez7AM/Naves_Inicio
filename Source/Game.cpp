@@ -5,8 +5,7 @@
 #include <SDL_image.h>
 
 CGame::CGame(){
-	estado=estado_iniciado;//ACT2: Mal <--Aqui debes de establecer el estado inicial de tu juego.
-
+	estado=estado_iniciado;
 }
 
 

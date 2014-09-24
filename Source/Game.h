@@ -4,7 +4,6 @@ class CGame
 {
 public:
 	enum Estado{
-
 		estado_iniciado,
 		estado_menu,
 		estado_jugando,
