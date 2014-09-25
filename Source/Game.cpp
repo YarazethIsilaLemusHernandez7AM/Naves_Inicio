@@ -6,15 +6,25 @@
 
 CGame::CGame(){
 	estado=estado_iniciado;//ACT2: Mal <--Aqui debes de establecer el estado inicial de tu juego.
-
+	atexit(SDL_Quit);
 }
 
 
 // Con esta función eliminaremos todos los elementos en pantalla
 void CGame::Finalize(){
+	SDL_Quit();
 }
 void CGame::iniciando(){
-	screen = SDL_SetVideoMode(324, 19, 24, SDL_HWSURFACE);
+	if (SDL_Init(SDL_INIT_VIDEO)){
+		printf("error %s", SDL_GetError());
+		exit(EXIT_FAILURE);
+	}
+	screen = SDL_SetVideoMode(640, 480, 24, SDL_SWSURFACE);
+	if (screen == NULL){
+		printf("error %s", SDL_GetError());
+		exit(EXIT_FAILURE);
+	}
+	SDL_WM_SetCaption("mi primer juego", NULL);
 }
 bool CGame::Start()
 {
@@ -32,8 +42,8 @@ bool CGame::Start()
 				SDL_Rect fuente;
 				fuente.x = 90;
 				fuente.y = 152;
-				fuente.w = 324;
-				fuente.h = 19;
+				fuente.w = 241;
+				fuente.h = 76;
 				SDL_Rect destino;
 				destino.x = 100;
 				destino.y = 100;
@@ -54,6 +64,8 @@ bool CGame::Start()
 		case Estado::estado_finalizado:
 				break;
 		};
+		//provicionamente
+		SDL_Flip(screen);
     }
 	return true;
 }
