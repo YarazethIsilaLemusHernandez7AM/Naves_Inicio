@@ -5,17 +5,14 @@
 #include <SDL_image.h>
 
 CGame::CGame(){
-<<<<<<< HEAD
 	estado=estado_iniciado;//ACT2: Mal <--Aqui debes de establecer el estado inicial de tu juego.
 	atexit(SDL_Quit);
-=======
-	estado=estado_iniciado;
->>>>>>> origin/master
 }
 
 
 // Con esta función eliminaremos todos los elementos en pantalla
-void CGame::Finalize(){
+void CGame::Finalize()
+{
 	SDL_Quit();
 }
 void CGame::iniciando(){
@@ -42,7 +39,7 @@ bool CGame::Start()
 		case Estado::estado_iniciado:
 			iniciando();
 			{
-				nave = IMG_LoadJPG_RW(SDL_RWFromFile("../Descargas/cuadro.jpg", "rb"));
+				nave = IMG_LoadJPG_RW(SDL_RWFromFile("../Data/cuadro.jpg", "rb"));
 				SDL_Rect fuente;
 				fuente.x = 90;
 				fuente.y = 152;
@@ -51,12 +48,12 @@ bool CGame::Start()
 				SDL_Rect destino;
 				destino.x = 100;
 				destino.y = 100;
-				destino.w = 100;
+				destino.w = fuente.w;
 				destino.h = fuente.h;
 				SDL_BlitSurface(nave, &fuente, screen, &destino);
 
 			}
-		
+			estado = Estado::estado_menu;
 			break;
 		case Estado::estado_menu:
 			break;
