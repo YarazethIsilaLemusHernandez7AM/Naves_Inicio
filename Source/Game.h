@@ -15,7 +15,7 @@ public:
 	static CGame instanceGame;
 
 	CGame();
-	void Finalize();
+	void Finalize(); 
 
 private:
 	void iniciando();
@@ -24,6 +24,8 @@ private:
 	SDL_Event event;//la ariable event de tipo eventode sdl nos servira para motorizar el
 	SDL_Surface* screen;
 	Nave* nave;
-	Estado estado; 
+	Nave* enemigo;
+	Estado estado;
+	Estado finestado;
 	
 };
