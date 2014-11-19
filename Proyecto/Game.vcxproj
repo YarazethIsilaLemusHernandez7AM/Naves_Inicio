@@ -83,7 +83,7 @@
     <ClInclude Include="..\Source\SpriteDef.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\Ejecutable\readme.txt" />
+    <Text Include="..\Ejecutable\Readme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

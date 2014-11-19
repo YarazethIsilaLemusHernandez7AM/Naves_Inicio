@@ -1,7 +1,32 @@
-﻿'Game.exe' (Win32): 'C:\Users\Yarazeth\Documents\GitHub\Naves_Inicio\Ejecutable\Game.exe' cargado. Símbolos cargados.
-'Game.exe' (Win32): 'C:\Windows\System32\ntdll.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
-'Game.exe' (Win32): 'C:\Windows\System32\kernel32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
-'Game.exe' (Win32): 'C:\Windows\System32\KernelBase.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
-'Game.exe' (Win32): 'C:\Windows\System32\msvcr120d.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
-El subproceso 0xe68 terminó con código -1073741510 (0xc000013a).
-El programa '[5364] Game.exe' terminó con código -1073741510 (0xc000013a).
+﻿'Game.exe' (Win32): 'C:\Users\Yesenia Huerta\Documents\GitHub\Naves_Inicio\Ejecutable\Game.exe' cargado. Símbolos cargados.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\ntdll.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\kernel32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\KernelBase.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Users\Yesenia Huerta\Documents\GitHub\Naves_Inicio\Ejecutable\SDL.dll' cargado. El módulo se compiló sin símbolos.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\msvcr120d.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\advapi32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\gdi32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\msvcrt.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\user32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\winmm.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\sechost.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\rpcrt4.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\winmmbase.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\sspicli.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\cfgmgr32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\devobj.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\cryptbase.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\bcryptprimitives.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\imm32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\msctf.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\uxtheme.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\dwmapi.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\KBDUS.DLL' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\KBDUS.DLL' descargado
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\KBDLA.DLL' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\KBDLA.DLL' descargado
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\ole32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\combase.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\clbcatq.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+'Game.exe' (Win32): 'C:\Windows\SysWOW64\oleaut32.dll' cargado. No se encuentra el archivo PDB o no se puede abrir.
+El programa '[6692] Game.exe' terminó con código 0 (0x0).
