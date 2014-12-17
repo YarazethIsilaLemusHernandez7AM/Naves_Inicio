@@ -16,5 +16,6 @@ public:
 	void PintarModulo(int nombre, int x, int y);
 	int WidthModule(int module);
 	int HeightModule(int module);
+	
 };
 #endif 

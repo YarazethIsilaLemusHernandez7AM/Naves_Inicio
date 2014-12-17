@@ -11,7 +11,7 @@ public:
 		int w;
 		int h;
 	};
-	Modulos modulos [9];
+	Modulos modulos [10];
 	SpriteDef();
 };
 

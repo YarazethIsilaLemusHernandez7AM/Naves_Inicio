@@ -16,11 +16,18 @@
 //#TIPO_IMGEN_NOMBRE
 #define MODULO_MINAVE_NAVE                       0
 #define MODULO_FONDOJUEGO_FONDO                  1
-#define  MODULO_ENEMIGO_NAVE                     2
+#define MODULO_ENEMIGO_NAVE                      2
 #define MODULO_TEXTOS_TITULOS                    3
 #define MODULO_TEXTO_NOMBRE                      4
 #define MODULO_TEXTO_MENU_INICIAR1               5
 #define MODULO_TEXTO_MENU_SALIR1                 6
 #define MODULO_TEXTO_MENU_INICIAR2_SELECCIONADO  7
 #define MODULO_TEXTO_MENU_SALIR2_SELECCIONADO    8
+#define MODULO_BALAS_BALA                        9
+
+#define MAXIMO_DE_BALAS 30
+
+#define NAVE_PROPIA  0
+#define NAVE_ENEMIGO 1
+
 #endif 

@@ -18,7 +18,7 @@ SpriteDef::SpriteDef(){
 	modulos[2].x = 0;
 	modulos[2].y = 0;
 	modulos[2].w = 54;
-	modulos[2].h = 61;
+	modulos[2].h = 60;
 
 	modulos[3].id = MODULO_TEXTOS_TITULOS;
 	modulos[3].x = 49;
@@ -45,14 +45,20 @@ SpriteDef::SpriteDef(){
 	modulos[6].h = 81;
 
 	modulos[7].id = MODULO_TEXTO_MENU_INICIAR2_SELECCIONADO;
-	modulos[7].x = 364;
-	modulos[7].y = 181;
-	modulos[7].w = 219;
-	modulos[7].h = 177;
+	modulos[7].x = 369;
+	modulos[7].y = 186;
+	modulos[7].w = 208;
+	modulos[7].h = 69;
 
 	modulos[8].id = MODULO_TEXTO_MENU_SALIR2_SELECCIONADO;
-	modulos[8].x = 360;
-	modulos[8].y = 300;
-	modulos[8].w = 218;
-	modulos[8].h = 104;
+	modulos[8].x = 371;
+	modulos[8].y = 309;
+	modulos[8].w = 158;
+	modulos[8].h = 65;
+
+	modulos[9].id = MODULO_BALAS_BALA;
+	modulos[9].x = 0;
+	modulos[9].y = 0;
+	modulos[9].w = 5;
+	modulos[9].h = 5;
 }

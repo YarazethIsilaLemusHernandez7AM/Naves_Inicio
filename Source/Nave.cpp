@@ -1,74 +1,107 @@
 #include "Nave.h"
 #include "config.h"
-Nave::Nave(SDL_Surface*screen,char*rutaImagen,int x,int y, int module){
-	this->module = module;
-	sprite = new Sprite(screen);
-	sprite->CargarImagen(rutaImagen);
-	w = sprite->WidthModule(this->module);
-	h = sprite->HeightModule(this->module);
-	this->x = x;
-	this->y = y;
-	autoMovimiento = false;
-	pasoActual = 0;
-	pasoLimite = -1;
-}
-void Nave::Setautomovimiento(bool autoMovimiento){
-	this->autoMovimiento = autoMovimiento;
-}
-void Nave::Actualizar(){
-	if (autoMovimiento)
+Nave::Nave(SDL_Surface*screen, char*rutaImagen, int x, int y, int module)
+{
+	nave = new Objeto(screen, rutaImagen, x, y, module);
+	for (int i = 0; i < MAXIMO_DE_BALAS; i++)
 	{
-		Mover(1); 
-		Mover1(1);
+		bala[i] = new Objeto(screen, "../Data/balas.bmp", 0, 0, MODULO_BALAS_BALA);
+		bala[i]->SetVisible(false);
 	}
-	if (pasoLimite > 0){
-		//pasoActual++;
-		if (pasoActual >= pasoLimite)
-			pasoActual = 0;
+	balaVisible = 0;
+	visible = true;
+	colision = false;
+}
+void Nave::crearNuevo()
+{
+	balaVisible = 0;
+	visible = true;
+	colision = false;
+	for (int i = 0; i < MAXIMO_DE_BALAS; i++)
+	{
+		bala[i]->SetVisible(false);
+	}
+	nave->ponerEn(0, 0);
+}
+
+void Nave::Disparar(int tipoNave ,int balas){
+
+	if (visible)
+	{
+		bala[balaVisible]->SetVisible(true);
+		switch (tipoNave)
+		{
+		case NAVE_PROPIA:
+			bala[balaVisible]->ponerEn(nave->ObtenerX() + nave->ObtenerW() / 2, nave->ObtenerY());
+			break;
+
+		case NAVE_ENEMIGO:
+			bala[balaVisible]->ponerEn(nave->ObtenerX() + nave->ObtenerW() / 2, nave->ObtenerY() + nave->ObtenerH());
+			break;
+		}
+		balaVisible++;
+
+		if (balaVisible >= balas)
+			balaVisible = 0;
 	}
 }
-void Nave::Pintar(){
-	sprite->PintarModulo(module, x, y);
+
+void Nave::Pintar(int tipoNave)
+{
+	if (visible){
+		nave->Pintar();
+		for (int i = 0; i < MAXIMO_DE_BALAS; i++)
+		{
+			bala[i]->Pintar();
+			switch (tipoNave)
+			{
+			case NAVE_PROPIA:
+				bala[i]->Mover1(-10);
+				break;
+
+			case NAVE_ENEMIGO:
+				bala[i]->Mover1(10);
+				break;
+			}
+		}
+	}
 }
-void Nave::Pintar(int module, int x, int y){
-	sprite->PintarModulo(module, x, y);
+void Nave::MoverAbajo(int velocidad)
+{
+	nave->Mover1(velocidad);
 }
-void Nave::Mover(int posicion){
-	x += posicion;
+void Nave::MoverArriba(int velocidad)
+{
+	nave->Mover1(-velocidad);
 }
-void Nave::Mover1(int posicion){
-	y += posicion;
+void Nave::MoverDerecha(int velocidad)
+{
+	nave->Mover(velocidad);
 }
-int Nave::ObtenerX(){
-	return x;
+void Nave::MoverIzquierda(int velocidad)
+{
+	nave->Mover(-velocidad);
+}
+Objeto*Nave::GetNaveObjeto()
+{
+	return nave;
+}
+void Nave::AutoDisparar(int balas)
+{
+	if ((rand()%100)<2)
+	     Disparar(NAVE_ENEMIGO,balas);
+	//aqui
+}
+void Nave::setVisible(bool visible)
+{
+	this->visible = visible;
 }
 
-int Nave::ObtenerY(){
-	return y;
-
+bool Nave::estaColisionandoConBala(Nave * nave){
+	return this->colision;
 }
 
-int Nave::ObtenerW()
+void Nave::simularColision(bool colision)
 {
-	return w;
-}
-
-int Nave::ObtenerH()
-{
-	return h;
-}
-void Nave::SetPasosLimite(int pasos)
-{
-	this->pasoLimite = pasos;
-}
-int Nave::ObtenerPasoActual()
-{
-	return pasoActual;
-}
-void Nave::IncrementarPasoActual(){
-	pasoActual++;
-}
-bool Nave::EstaColicionando(Nave * b)
-{
-	return false;
+	this->colision = colision;
 }

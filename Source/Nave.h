@@ -1,33 +1,29 @@
 #ifndef __NAVE_H__
 #define __NAVE_H__
-#include "Sprite.h"
-class  Nave
+#include "Objeto.h"
+#include "Config.h"
+class Nave
 {
-	Sprite*sprite;
-	int x;
-	int y;
-	int w;
-	int h;
-	bool autoMovimiento;
-	int pasoActual;
-	int pasoLimite;
-	int module;
-public:
-	void Mover(int posicion);
-	void Mover1(int posicion);
-	Nave(SDL_Surface*screen, char*rutaImagen,int x,int y,int module);//constructor
-	void Setautomovimiento(bool autoMovimiento);
-	void SetPasosLimite(int pasos);
-	int ObtenerPasoActual();
-	void IncrementarPasoActual();
-	void Pintar();
-	void Pintar(int module,int x, int y);
-	void Actualizar();
-	int ObtenerY();
-	int ObtenerW();
-	int ObtenerH();
-	bool EstaColicionando(Nave * b);
-	int ObtenerX();
+	Objeto * nave;
+	Objeto * bala[MAXIMO_DE_BALAS];
+	int balaVisible;
+	bool visible;
+	bool colision;
+public :
+	Nave(SDL_Surface*screen, char*rutaImagen, int x, int y, int module);
+	void Pintar(int tipoNave);
+	void Disparar(int tipoNave, int balas);
+	void AutoDisparar(int balas);
 
+	void MoverArriba(int velocidad);
+	void MoverAbajo(int velocidad);
+	void MoverIzquierda(int velocidad);
+	void MoverDerecha(int velocidad);
+
+	Objeto* GetNaveObjeto();
+	void setVisible(bool visible);
+	bool estaColisionandoConBala(Nave * nave);
+	void crearNuevo();
+	void simularColision(bool colision);
 };
 #endif
